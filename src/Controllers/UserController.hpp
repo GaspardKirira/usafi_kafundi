@@ -11,6 +11,23 @@
 
 namespace Softadastra
 {
+
+    // Fonction pour convertir unordered_map en une chaîne lisible
+    std::string unordered_map_to_string(const std::unordered_map<std::string, std::string> &map)
+    {
+        std::stringstream ss;
+        ss << "{";
+        for (auto it = map.begin(); it != map.end(); ++it)
+        {
+            if (it != map.begin())
+            {
+                ss << ", "; // Ajouter une virgule pour séparer les éléments
+            }
+            ss << it->first << ": " << it->second;
+        }
+        ss << "}";
+        return ss.str();
+    }
     class UserController : public Controller
     {
     public:
@@ -63,7 +80,6 @@ namespace Softadastra
                                          {
                                              std::vector<User> users = m_user_repository.findAll();
 
-                                             // Renvoi de la liste des utilisateurs au format JSON
                                              res.result(http::status::ok);
                                              res.set(http::field::content_type, "application/json");
                                              nlohmann::json json_users = nlohmann::json::array();
@@ -84,91 +100,71 @@ namespace Softadastra
             router.add_route(http::verb::post, "/create",
                              std::static_pointer_cast<IRequestHandler>(
                                  std::make_shared<DynamicRequestHandler>(
-                                     [this](const http::request<http::string_body> &req,
+                                     [this](const std::unordered_map<std::string, std::string> &params,
                                             http::response<http::string_body> &res)
                                      {
+                                         json request_json;
                                          try
                                          {
-                                             auto json_data = json::parse(req.body());
-                                             std::unordered_map<std::string, std::string> params;
-                                             if (json_data.find("firstname") != json_data.end())
-                                             {
-                                                 params["firstname"] = json_data["firstname"];
-                                             }
-                                             else
-                                             {
-                                                 res.result(http::status::bad_request);
-                                                 res.set(http::field::content_type, "application/json");
-                                                 res.body() = json{{"message", "Le champ 'firstname' est manquant."}}.dump();
-                                                 return;
-                                             }
-
-                                             if (json_data.find("lastname") != json_data.end())
-                                             {
-                                                 params["lastname"] = json_data["lastname"];
-                                             }
-                                             else
-                                             {
-                                                 res.result(http::status::bad_request);
-                                                 res.set(http::field::content_type, "application/json");
-                                                 res.body() = json{{"message", "Le champ 'lastname' est manquant."}}.dump();
-                                                 return;
-                                             }
-
-                                             if (json_data.find("username") != json_data.end())
-                                             {
-                                                 params["username"] = json_data["username"];
-                                             }
-                                             else
-                                             {
-                                                 res.result(http::status::bad_request);
-                                                 res.set(http::field::content_type, "application/json");
-                                                 res.body() = json{{"message", "Le champ 'username' est manquant."}}.dump();
-                                                 return;
-                                             }
-
-                                             if (json_data.find("email") != json_data.end())
-                                             {
-                                                 params["email"] = json_data["email"];
-                                             }
-                                             else
-                                             {
-                                                 res.result(http::status::bad_request);
-                                                 res.set(http::field::content_type, "application/json");
-                                                 res.body() = json{{"message", "Le champ 'email' est manquant."}}.dump();
-                                                 return;
-                                             }
-
-                                             if (json_data.find("password") != json_data.end())
-                                             {
-                                                 params["password"] = json_data["password"];
-                                             }
-                                             else
-                                             {
-                                                 res.result(http::status::bad_request);
-                                                 res.set(http::field::content_type, "application/json");
-                                                 res.body() = json{{"message", "Le champ 'password' est manquant."}}.dump();
-                                                 return;
-                                             }
-
-                                             // Ensuite, tu peux appeler ta fonction de création avec le 'unordered_map'
-                                             User new_user(params["firstname"], params["lastname"], params["username"], params["email"], params["password"]);
-
-                                             // Sauvegarder l'utilisateur dans la base de données
-                                             m_user_repository.saveUser(new_user);
-
-                                             // Répondre avec succès
-                                             res.result(http::status::created);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "User created successfully"}}.dump();
+                                             // Extraire et parser le JSON depuis les paramètres
+                                             request_json = json::parse(params.at("body"));
                                          }
                                          catch (const std::exception &e)
                                          {
-                                             // Gestion des erreurs générales
                                              res.result(http::status::bad_request);
                                              res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "Error creating user", "error", e.what()}}.dump();
+                                             res.body() = json{{"message", "Invalid JSON body."}}.dump();
+                                             return;
                                          }
+
+                                         // Vérification des champs dans le JSON
+                                         if (request_json.find("firstname") == request_json.end())
+                                         {
+                                             res.result(http::status::bad_request);
+                                             res.set(http::field::content_type, "application/json");
+                                             res.body() = json{{"message", "Le champ 'firstname' est manquant."}}.dump();
+                                             return;
+                                         }
+                                         if (request_json.find("lastname") == request_json.end())
+                                         {
+                                             res.result(http::status::bad_request);
+                                             res.set(http::field::content_type, "application/json");
+                                             res.body() = json{{"message", "Le champ 'lastname' est manquant."}}.dump();
+                                             return;
+                                         }
+                                         if (request_json.find("username") == request_json.end())
+                                         {
+                                             res.result(http::status::bad_request);
+                                             res.set(http::field::content_type, "application/json");
+                                             res.body() = json{{"message", "Le champ 'username' est manquant."}}.dump();
+                                             return;
+                                         }
+                                         if (request_json.find("email") == request_json.end())
+                                         {
+                                             res.result(http::status::bad_request);
+                                             res.set(http::field::content_type, "application/json");
+                                             res.body() = json{{"message", "Le champ 'email' est manquant."}}.dump();
+                                             return;
+                                         }
+                                         if (request_json.find("password") == request_json.end())
+                                         {
+                                             res.result(http::status::bad_request);
+                                             res.set(http::field::content_type, "application/json");
+                                             res.body() = json{{"message", "Le champ 'password' est manquant."}}.dump();
+                                             return;
+                                         }
+
+                                         // Créer un nouvel utilisateur
+                                         User new_user(request_json["firstname"], request_json["lastname"],
+                                                       request_json["username"], request_json["email"], request_json["password"]);
+
+                                         // Sauvegarder l'utilisateur dans la base de données
+                                         m_user_repository.saveUser(new_user);
+
+                                         // Répondre avec succès
+                                         res.result(http::status::created);
+                                         res.set(http::field::content_type, "application/json");
+                                         res.body() = json{{"message", "User created successfully"}}.dump();
                                      })));
 
             router.add_route(http::verb::put, "/user/{id}",
