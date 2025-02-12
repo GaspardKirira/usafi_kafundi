@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/softadastra/cleaning_plateforme
+CMAKE_SOURCE_DIR = /home/softadastra/Documents/usafi_kafundi
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/softadastra/cleaning_plateforme/build
+CMAKE_BINARY_DIR = /home/softadastra/Documents/usafi_kafundi/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/softadastra/cleaning_plateforme/build/CMakeFiles /home/softadastra/cleaning_plateforme/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/softadastra/Documents/usafi_kafundi/build/CMakeFiles /home/softadastra/Documents/usafi_kafundi/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/softadastra/cleaning_plateforme/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/softadastra/Documents/usafi_kafundi/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,78 @@ prog: cmake_check_build_system
 prog/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/build
 .PHONY : prog/fast
+
+src/category/Category.o: src/category/Category.cpp.o
+.PHONY : src/category/Category.o
+
+# target to build an object file
+src/category/Category.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/category/Category.cpp.o
+.PHONY : src/category/Category.cpp.o
+
+src/category/Category.i: src/category/Category.cpp.i
+.PHONY : src/category/Category.i
+
+# target to preprocess a source file
+src/category/Category.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/category/Category.cpp.i
+.PHONY : src/category/Category.cpp.i
+
+src/category/Category.s: src/category/Category.cpp.s
+.PHONY : src/category/Category.s
+
+# target to generate assembly for a file
+src/category/Category.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/category/Category.cpp.s
+.PHONY : src/category/Category.cpp.s
+
+src/category/CategoryRepository.o: src/category/CategoryRepository.cpp.o
+.PHONY : src/category/CategoryRepository.o
+
+# target to build an object file
+src/category/CategoryRepository.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o
+.PHONY : src/category/CategoryRepository.cpp.o
+
+src/category/CategoryRepository.i: src/category/CategoryRepository.cpp.i
+.PHONY : src/category/CategoryRepository.i
+
+# target to preprocess a source file
+src/category/CategoryRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.i
+.PHONY : src/category/CategoryRepository.cpp.i
+
+src/category/CategoryRepository.s: src/category/CategoryRepository.cpp.s
+.PHONY : src/category/CategoryRepository.s
+
+# target to generate assembly for a file
+src/category/CategoryRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.s
+.PHONY : src/category/CategoryRepository.cpp.s
+
+src/category/CategoryValidator.o: src/category/CategoryValidator.cpp.o
+.PHONY : src/category/CategoryValidator.o
+
+# target to build an object file
+src/category/CategoryValidator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o
+.PHONY : src/category/CategoryValidator.cpp.o
+
+src/category/CategoryValidator.i: src/category/CategoryValidator.cpp.i
+.PHONY : src/category/CategoryValidator.i
+
+# target to preprocess a source file
+src/category/CategoryValidator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.i
+.PHONY : src/category/CategoryValidator.cpp.i
+
+src/category/CategoryValidator.s: src/category/CategoryValidator.cpp.s
+.PHONY : src/category/CategoryValidator.s
+
+# target to generate assembly for a file
+src/category/CategoryValidator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.s
+.PHONY : src/category/CategoryValidator.cpp.s
 
 src/config/Config.o: src/config/Config.cpp.o
 .PHONY : src/config/Config.o
@@ -450,6 +522,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... prog"
+	@echo "... src/category/Category.o"
+	@echo "... src/category/Category.i"
+	@echo "... src/category/Category.s"
+	@echo "... src/category/CategoryRepository.o"
+	@echo "... src/category/CategoryRepository.i"
+	@echo "... src/category/CategoryRepository.s"
+	@echo "... src/category/CategoryValidator.o"
+	@echo "... src/category/CategoryValidator.i"
+	@echo "... src/category/CategoryValidator.s"
 	@echo "... src/config/Config.o"
 	@echo "... src/config/Config.i"
 	@echo "... src/config/Config.s"

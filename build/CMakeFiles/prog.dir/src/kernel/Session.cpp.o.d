@@ -1,7 +1,7 @@
 CMakeFiles/prog.dir/src/kernel/Session.cpp.o: \
- /home/softadastra/cleaning_plateforme/src/kernel/Session.cpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Session.cpp \
  /usr/include/stdc-predef.h \
- /home/softadastra/cleaning_plateforme/src/kernel/Session.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Session.hpp \
  /usr/local/include/boost/asio/ip/tcp.hpp \
  /usr/local/include/boost/asio/detail/config.hpp \
  /usr/local/include/boost/config.hpp \
@@ -1714,7 +1714,7 @@ CMakeFiles/prog.dir/src/kernel/Session.cpp.o: \
  /usr/include/nlohmann/ordered_map.hpp \
  /usr/include/nlohmann/detail/macro_unscope.hpp \
  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/Router.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Router.hpp \
  /usr/local/include/boost/beast/core.hpp \
  /usr/local/include/boost/beast/core/basic_stream.hpp \
  /usr/local/include/boost/beast/core/detail/stream_base.hpp \
@@ -1809,8 +1809,8 @@ CMakeFiles/prog.dir/src/kernel/Session.cpp.o: \
  /usr/local/include/boost/regex/v5/regex_merge.hpp \
  /usr/local/include/boost/regex/v5/regex_split.hpp \
  /usr/include/c++/13/iostream \
- /home/softadastra/cleaning_plateforme/src/kernel/IRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/IRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/Config.hpp \
  /usr/include/mysql_driver.h /usr/local/include/boost/scoped_ptr.hpp \
  /usr/local/include/boost/smart_ptr/scoped_ptr.hpp \
  /usr/include/cppconn/driver.h /usr/include/cppconn/connection.h \
@@ -1826,7 +1826,7 @@ CMakeFiles/prog.dir/src/kernel/Session.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc \
- /home/softadastra/cleaning_plateforme/src/kernel/Response.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Response.hpp \
  /usr/local/include/boost/filesystem.hpp \
  /usr/local/include/boost/filesystem/config.hpp \
  /usr/local/include/boost/filesystem/path.hpp \

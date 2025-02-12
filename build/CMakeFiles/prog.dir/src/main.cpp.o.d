@@ -1,7 +1,7 @@
 CMakeFiles/prog.dir/src/main.cpp.o: \
- /home/softadastra/cleaning_plateforme/src/main.cpp \
+ /home/softadastra/Documents/usafi_kafundi/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/softadastra/cleaning_plateforme/src/config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/Config.hpp \
  /usr/include/mysql_driver.h /usr/local/include/boost/scoped_ptr.hpp \
  /usr/local/include/boost/smart_ptr/scoped_ptr.hpp \
  /usr/local/include/boost/config.hpp \
@@ -360,7 +360,7 @@ CMakeFiles/prog.dir/src/main.cpp.o: \
  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
  /usr/include/c++/13/mutex /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /home/softadastra/cleaning_plateforme/src/kernel/HTTPServer.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/HTTPServer.hpp \
  /usr/local/include/boost/beast/core.hpp \
  /usr/local/include/boost/beast/core/detail/config.hpp \
  /usr/local/include/boost/version.hpp \
@@ -1656,13 +1656,13 @@ CMakeFiles/prog.dir/src/main.cpp.o: \
  /usr/local/include/spdlog/details/synchronous_factory.h \
  /usr/local/include/spdlog/version.h \
  /usr/local/include/spdlog/spdlog-inl.h \
- /home/softadastra/cleaning_plateforme/src/kernel/SimpleRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/IRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/DynamicRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/../config/Config.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/Router.hpp \
- /home/softadastra/cleaning_plateforme/src/config/Config.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/Session.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/SimpleRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/IRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/DynamicRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/../config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Router.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Session.hpp \
  /usr/local/include/boost/asio.hpp \
  /usr/local/include/boost/asio/awaitable.hpp \
  /usr/local/include/boost/asio/basic_datagram_socket.hpp \
@@ -1827,7 +1827,7 @@ CMakeFiles/prog.dir/src/main.cpp.o: \
  /usr/local/include/boost/asio/writable_pipe.hpp \
  /usr/local/include/boost/asio/write_at.hpp \
  /usr/local/include/boost/asio/impl/write_at.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/Response.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Response.hpp \
  /usr/local/include/boost/filesystem.hpp \
  /usr/local/include/boost/filesystem/config.hpp \
  /usr/local/include/boost/filesystem/path.hpp \
@@ -1902,13 +1902,13 @@ CMakeFiles/prog.dir/src/main.cpp.o: \
  /usr/local/include/boost/filesystem/convenience.hpp \
  /usr/local/include/boost/filesystem/string_file.hpp \
  /usr/local/include/boost/filesystem/fstream.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/../config/RouteConfigurator.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/../config/../kernel/Router.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/../config/../kernel/SimpleRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/../config/../kernel/DynamicRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/../config/../kernel/IRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/../config/../config/Config.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/ThreadPool.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/../config/RouteConfigurator.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/../config/../kernel/Router.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/../config/../kernel/SimpleRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/../config/../kernel/DynamicRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/../config/../kernel/IRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/../config/../config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/ThreadPool.hpp \
  /usr/include/c++/13/queue /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /usr/include/c++/13/bits/stl_queue.h

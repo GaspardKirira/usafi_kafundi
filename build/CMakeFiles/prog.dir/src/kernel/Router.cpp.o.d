@@ -1,8 +1,8 @@
 CMakeFiles/prog.dir/src/kernel/Router.cpp.o: \
- /home/softadastra/cleaning_plateforme/src/kernel/Router.cpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Router.cpp \
  /usr/include/stdc-predef.h \
- /home/softadastra/cleaning_plateforme/src/kernel/DynamicRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/IRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/DynamicRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/IRequestHandler.hpp \
  /usr/local/include/boost/beast/http.hpp \
  /usr/local/include/boost/beast/core/detail/config.hpp \
  /usr/local/include/boost/config.hpp \
@@ -994,7 +994,7 @@ CMakeFiles/prog.dir/src/kernel/Router.cpp.o: \
  /usr/local/include/boost/asio/detail/base_from_completion_cond.hpp \
  /usr/local/include/boost/asio/detail/consuming_buffers.hpp \
  /usr/local/include/boost/asio/detail/dependent_type.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/Router.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Router.hpp \
  /usr/local/include/boost/beast/core.hpp \
  /usr/local/include/boost/beast/core/basic_stream.hpp \
  /usr/local/include/boost/beast/core/detail/stream_base.hpp \
@@ -1647,7 +1647,7 @@ CMakeFiles/prog.dir/src/kernel/Router.cpp.o: \
  /usr/local/include/spdlog/details/synchronous_factory.h \
  /usr/local/include/spdlog/version.h \
  /usr/local/include/spdlog/spdlog-inl.h \
- /home/softadastra/cleaning_plateforme/src/config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/Config.hpp \
  /usr/include/mysql_driver.h /usr/local/include/boost/scoped_ptr.hpp \
  /usr/local/include/boost/smart_ptr/scoped_ptr.hpp \
  /usr/include/cppconn/driver.h /usr/include/cppconn/connection.h \
@@ -1663,7 +1663,7 @@ CMakeFiles/prog.dir/src/kernel/Router.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc \
- /home/softadastra/cleaning_plateforme/src/kernel/Response.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Response.hpp \
  /usr/local/include/boost/filesystem.hpp \
  /usr/local/include/boost/filesystem/config.hpp \
  /usr/local/include/boost/filesystem/path.hpp \

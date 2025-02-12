@@ -10,8 +10,12 @@ namespace Softadastra
     class IUserRepository
     {
     public:
-        virtual void saveUser(const User &user) = 0;
+        IUserRepository() = default;
         virtual ~IUserRepository() = default;
+        IUserRepository(const IUserRepository &) = delete;
+        void operator=(const IUserRepository &) = delete;
+
+        virtual void saveUser(const User &user) = 0;
     };
 
 } // namespace Softadastra

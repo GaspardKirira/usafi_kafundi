@@ -1,8 +1,8 @@
 CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: \
- /home/softadastra/cleaning_plateforme/src/config/RouteConfigurator.cpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/RouteConfigurator.cpp \
  /usr/include/stdc-predef.h \
- /home/softadastra/cleaning_plateforme/src/config/RouteConfigurator.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../kernel/Router.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/RouteConfigurator.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../kernel/Router.hpp \
  /usr/local/include/boost/beast/core.hpp \
  /usr/local/include/boost/beast/core/detail/config.hpp \
  /usr/local/include/boost/config.hpp \
@@ -1641,8 +1641,8 @@ CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: \
  /usr/local/include/spdlog/details/synchronous_factory.h \
  /usr/local/include/spdlog/version.h \
  /usr/local/include/spdlog/spdlog-inl.h \
- /home/softadastra/cleaning_plateforme/src/config/../kernel/IRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../kernel/IRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/Config.hpp \
  /usr/include/mysql_driver.h /usr/local/include/boost/scoped_ptr.hpp \
  /usr/local/include/boost/smart_ptr/scoped_ptr.hpp \
  /usr/include/cppconn/driver.h /usr/include/cppconn/connection.h \
@@ -1658,15 +1658,15 @@ CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc \
- /home/softadastra/cleaning_plateforme/src/config/../kernel/SimpleRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../kernel/DynamicRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../kernel/IRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../config/Config.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/ProductController.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/Controller.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../kernel/Router.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../config/Config.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../kernel/Response.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../kernel/SimpleRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../kernel/DynamicRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../kernel/IRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/ProductController.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/Controller.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../kernel/Router.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../kernel/Response.hpp \
  /usr/local/include/boost/filesystem.hpp \
  /usr/local/include/boost/filesystem/config.hpp \
  /usr/local/include/boost/filesystem/path.hpp \
@@ -1741,8 +1741,8 @@ CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: \
  /usr/local/include/boost/filesystem/convenience.hpp \
  /usr/local/include/boost/filesystem/string_file.hpp \
  /usr/local/include/boost/filesystem/fstream.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../kernel/RequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../kernel/DynamicRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../kernel/RequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../kernel/DynamicRequestHandler.hpp \
  /usr/include/c++/13/regex /usr/include/c++/13/bitset \
  /usr/include/c++/13/stack /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
@@ -1758,13 +1758,13 @@ CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: \
  /usr/include/c++/13/bits/regex.h /usr/include/c++/13/bits/regex.tcc \
  /usr/include/c++/13/bits/regex_executor.h \
  /usr/include/c++/13/bits/regex_executor.tcc \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../kernel/Response.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/UserController.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/Validator.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../user/User.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../user/Password.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../user/PasswordValidator.hpp \
- /home/softadastra/cleaning_plateforme/libs/bcrypt/bcrypt.h \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../kernel/Response.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/UserController.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/Validator.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../user/User.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../user/Password.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../user/PasswordValidator.hpp \
+ /home/softadastra/Documents/usafi_kafundi/libs/bcrypt/bcrypt.h \
  /usr/include/openssl/evp.h /usr/include/openssl/macros.h \
  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
  /usr/include/x86_64-linux-gnu/openssl/configuration.h \
@@ -1780,12 +1780,18 @@ CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: \
  /usr/include/openssl/objects.h /usr/include/openssl/obj_mac.h \
  /usr/include/openssl/asn1.h /usr/include/openssl/asn1err.h \
  /usr/include/openssl/objectserr.h \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../user/Email.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../user/EmailValidator.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../user/UserRepository.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../user/IUserRepository.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../user/User.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/../user/../config/Config.hpp \
- /home/softadastra/cleaning_plateforme/src/config/../Controllers/HomeController.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../user/Email.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../user/EmailValidator.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../user/UserRepository.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../user/IUserRepository.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../user/User.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../user/../config/Config.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/HomeController.hpp \
  /usr/include/c++/13/unordered_set \
- /usr/include/c++/13/bits/unordered_set.h
+ /usr/include/c++/13/bits/unordered_set.h \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/CategoryController.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../category/Category.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../category/CategoryRepository.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../category/ICategoryRepository.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../category/Category.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/config/../Controllers/../category/../config/Config.hpp

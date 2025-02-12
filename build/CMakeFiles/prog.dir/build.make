@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/softadastra/cleaning_plateforme
+CMAKE_SOURCE_DIR = /home/softadastra/Documents/usafi_kafundi
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/softadastra/cleaning_plateforme/build
+CMAKE_BINARY_DIR = /home/softadastra/Documents/usafi_kafundi/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/prog.dir/depend.make
@@ -69,190 +69,235 @@ include CMakeFiles/prog.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/prog.dir/flags.make
 
+CMakeFiles/prog.dir/src/category/Category.cpp.o: CMakeFiles/prog.dir/flags.make
+CMakeFiles/prog.dir/src/category/Category.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/category/Category.cpp
+CMakeFiles/prog.dir/src/category/Category.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/prog.dir/src/category/Category.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/category/Category.cpp.o -MF CMakeFiles/prog.dir/src/category/Category.cpp.o.d -o CMakeFiles/prog.dir/src/category/Category.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/category/Category.cpp
+
+CMakeFiles/prog.dir/src/category/Category.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/category/Category.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/category/Category.cpp > CMakeFiles/prog.dir/src/category/Category.cpp.i
+
+CMakeFiles/prog.dir/src/category/Category.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/category/Category.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/category/Category.cpp -o CMakeFiles/prog.dir/src/category/Category.cpp.s
+
+CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o: CMakeFiles/prog.dir/flags.make
+CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/category/CategoryRepository.cpp
+CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o -MF CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o.d -o CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/category/CategoryRepository.cpp
+
+CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/category/CategoryRepository.cpp > CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.i
+
+CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/category/CategoryRepository.cpp -o CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.s
+
+CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o: CMakeFiles/prog.dir/flags.make
+CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/category/CategoryValidator.cpp
+CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o -MF CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o.d -o CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/category/CategoryValidator.cpp
+
+CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/category/CategoryValidator.cpp > CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.i
+
+CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/category/CategoryValidator.cpp -o CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.s
+
 CMakeFiles/prog.dir/src/config/Config.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/config/Config.cpp.o: /home/softadastra/cleaning_plateforme/src/config/Config.cpp
+CMakeFiles/prog.dir/src/config/Config.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/config/Config.cpp
 CMakeFiles/prog.dir/src/config/Config.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/prog.dir/src/config/Config.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/config/Config.cpp.o -MF CMakeFiles/prog.dir/src/config/Config.cpp.o.d -o CMakeFiles/prog.dir/src/config/Config.cpp.o -c /home/softadastra/cleaning_plateforme/src/config/Config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/prog.dir/src/config/Config.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/config/Config.cpp.o -MF CMakeFiles/prog.dir/src/config/Config.cpp.o.d -o CMakeFiles/prog.dir/src/config/Config.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/config/Config.cpp
 
 CMakeFiles/prog.dir/src/config/Config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/config/Config.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/config/Config.cpp > CMakeFiles/prog.dir/src/config/Config.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/config/Config.cpp > CMakeFiles/prog.dir/src/config/Config.cpp.i
 
 CMakeFiles/prog.dir/src/config/Config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/config/Config.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/config/Config.cpp -o CMakeFiles/prog.dir/src/config/Config.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/config/Config.cpp -o CMakeFiles/prog.dir/src/config/Config.cpp.s
 
 CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: /home/softadastra/cleaning_plateforme/src/config/RouteConfigurator.cpp
+CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/config/RouteConfigurator.cpp
 CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o -MF CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o.d -o CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o -c /home/softadastra/cleaning_plateforme/src/config/RouteConfigurator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o -MF CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o.d -o CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/config/RouteConfigurator.cpp
 
 CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/config/RouteConfigurator.cpp > CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/config/RouteConfigurator.cpp > CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.i
 
 CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/config/RouteConfigurator.cpp -o CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/config/RouteConfigurator.cpp -o CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.s
 
 CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o: /home/softadastra/cleaning_plateforme/src/kernel/DynamicRequestHandler.cpp
+CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/kernel/DynamicRequestHandler.cpp
 CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o -MF CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o -c /home/softadastra/cleaning_plateforme/src/kernel/DynamicRequestHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o -MF CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/kernel/DynamicRequestHandler.cpp
 
 CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/kernel/DynamicRequestHandler.cpp > CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/kernel/DynamicRequestHandler.cpp > CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.i
 
 CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/kernel/DynamicRequestHandler.cpp -o CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/kernel/DynamicRequestHandler.cpp -o CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.s
 
 CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o: /home/softadastra/cleaning_plateforme/src/kernel/HTTPServer.cpp
+CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/kernel/HTTPServer.cpp
 CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o -MF CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o -c /home/softadastra/cleaning_plateforme/src/kernel/HTTPServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o -MF CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/kernel/HTTPServer.cpp
 
 CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/kernel/HTTPServer.cpp > CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/kernel/HTTPServer.cpp > CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.i
 
 CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/kernel/HTTPServer.cpp -o CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/kernel/HTTPServer.cpp -o CMakeFiles/prog.dir/src/kernel/HTTPServer.cpp.s
 
 CMakeFiles/prog.dir/src/kernel/Router.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/kernel/Router.cpp.o: /home/softadastra/cleaning_plateforme/src/kernel/Router.cpp
+CMakeFiles/prog.dir/src/kernel/Router.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/kernel/Router.cpp
 CMakeFiles/prog.dir/src/kernel/Router.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/prog.dir/src/kernel/Router.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/Router.cpp.o -MF CMakeFiles/prog.dir/src/kernel/Router.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/Router.cpp.o -c /home/softadastra/cleaning_plateforme/src/kernel/Router.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/prog.dir/src/kernel/Router.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/Router.cpp.o -MF CMakeFiles/prog.dir/src/kernel/Router.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/Router.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/kernel/Router.cpp
 
 CMakeFiles/prog.dir/src/kernel/Router.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/kernel/Router.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/kernel/Router.cpp > CMakeFiles/prog.dir/src/kernel/Router.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/kernel/Router.cpp > CMakeFiles/prog.dir/src/kernel/Router.cpp.i
 
 CMakeFiles/prog.dir/src/kernel/Router.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/kernel/Router.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/kernel/Router.cpp -o CMakeFiles/prog.dir/src/kernel/Router.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/kernel/Router.cpp -o CMakeFiles/prog.dir/src/kernel/Router.cpp.s
 
 CMakeFiles/prog.dir/src/kernel/Session.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/kernel/Session.cpp.o: /home/softadastra/cleaning_plateforme/src/kernel/Session.cpp
+CMakeFiles/prog.dir/src/kernel/Session.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/kernel/Session.cpp
 CMakeFiles/prog.dir/src/kernel/Session.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/prog.dir/src/kernel/Session.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/Session.cpp.o -MF CMakeFiles/prog.dir/src/kernel/Session.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/Session.cpp.o -c /home/softadastra/cleaning_plateforme/src/kernel/Session.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/prog.dir/src/kernel/Session.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/Session.cpp.o -MF CMakeFiles/prog.dir/src/kernel/Session.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/Session.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/kernel/Session.cpp
 
 CMakeFiles/prog.dir/src/kernel/Session.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/kernel/Session.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/kernel/Session.cpp > CMakeFiles/prog.dir/src/kernel/Session.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/kernel/Session.cpp > CMakeFiles/prog.dir/src/kernel/Session.cpp.i
 
 CMakeFiles/prog.dir/src/kernel/Session.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/kernel/Session.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/kernel/Session.cpp -o CMakeFiles/prog.dir/src/kernel/Session.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/kernel/Session.cpp -o CMakeFiles/prog.dir/src/kernel/Session.cpp.s
 
 CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o: /home/softadastra/cleaning_plateforme/src/kernel/SimpleRequestHandler.cpp
+CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/kernel/SimpleRequestHandler.cpp
 CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o -MF CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o -c /home/softadastra/cleaning_plateforme/src/kernel/SimpleRequestHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o -MF CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/kernel/SimpleRequestHandler.cpp
 
 CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/kernel/SimpleRequestHandler.cpp > CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/kernel/SimpleRequestHandler.cpp > CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.i
 
 CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/kernel/SimpleRequestHandler.cpp -o CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/kernel/SimpleRequestHandler.cpp -o CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.s
 
 CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o: /home/softadastra/cleaning_plateforme/src/kernel/ThreadPool.cpp
+CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/kernel/ThreadPool.cpp
 CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o -MF CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o -c /home/softadastra/cleaning_plateforme/src/kernel/ThreadPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o -MF CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o.d -o CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/kernel/ThreadPool.cpp
 
 CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/kernel/ThreadPool.cpp > CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/kernel/ThreadPool.cpp > CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.i
 
 CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/kernel/ThreadPool.cpp -o CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/kernel/ThreadPool.cpp -o CMakeFiles/prog.dir/src/kernel/ThreadPool.cpp.s
 
 CMakeFiles/prog.dir/src/main.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/main.cpp.o: /home/softadastra/cleaning_plateforme/src/main.cpp
+CMakeFiles/prog.dir/src/main.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/main.cpp
 CMakeFiles/prog.dir/src/main.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/prog.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/main.cpp.o -MF CMakeFiles/prog.dir/src/main.cpp.o.d -o CMakeFiles/prog.dir/src/main.cpp.o -c /home/softadastra/cleaning_plateforme/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/prog.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/main.cpp.o -MF CMakeFiles/prog.dir/src/main.cpp.o.d -o CMakeFiles/prog.dir/src/main.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/main.cpp
 
 CMakeFiles/prog.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/main.cpp > CMakeFiles/prog.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/main.cpp > CMakeFiles/prog.dir/src/main.cpp.i
 
 CMakeFiles/prog.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/main.cpp -o CMakeFiles/prog.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/main.cpp -o CMakeFiles/prog.dir/src/main.cpp.s
 
 CMakeFiles/prog.dir/src/user/User.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/user/User.cpp.o: /home/softadastra/cleaning_plateforme/src/user/User.cpp
+CMakeFiles/prog.dir/src/user/User.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/user/User.cpp
 CMakeFiles/prog.dir/src/user/User.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/prog.dir/src/user/User.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/user/User.cpp.o -MF CMakeFiles/prog.dir/src/user/User.cpp.o.d -o CMakeFiles/prog.dir/src/user/User.cpp.o -c /home/softadastra/cleaning_plateforme/src/user/User.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/prog.dir/src/user/User.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/user/User.cpp.o -MF CMakeFiles/prog.dir/src/user/User.cpp.o.d -o CMakeFiles/prog.dir/src/user/User.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/user/User.cpp
 
 CMakeFiles/prog.dir/src/user/User.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/user/User.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/user/User.cpp > CMakeFiles/prog.dir/src/user/User.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/user/User.cpp > CMakeFiles/prog.dir/src/user/User.cpp.i
 
 CMakeFiles/prog.dir/src/user/User.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/user/User.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/user/User.cpp -o CMakeFiles/prog.dir/src/user/User.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/user/User.cpp -o CMakeFiles/prog.dir/src/user/User.cpp.s
 
 CMakeFiles/prog.dir/src/user/UserRepository.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/user/UserRepository.cpp.o: /home/softadastra/cleaning_plateforme/src/user/UserRepository.cpp
+CMakeFiles/prog.dir/src/user/UserRepository.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/user/UserRepository.cpp
 CMakeFiles/prog.dir/src/user/UserRepository.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/prog.dir/src/user/UserRepository.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/user/UserRepository.cpp.o -MF CMakeFiles/prog.dir/src/user/UserRepository.cpp.o.d -o CMakeFiles/prog.dir/src/user/UserRepository.cpp.o -c /home/softadastra/cleaning_plateforme/src/user/UserRepository.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/prog.dir/src/user/UserRepository.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/user/UserRepository.cpp.o -MF CMakeFiles/prog.dir/src/user/UserRepository.cpp.o.d -o CMakeFiles/prog.dir/src/user/UserRepository.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/user/UserRepository.cpp
 
 CMakeFiles/prog.dir/src/user/UserRepository.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/user/UserRepository.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/user/UserRepository.cpp > CMakeFiles/prog.dir/src/user/UserRepository.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/user/UserRepository.cpp > CMakeFiles/prog.dir/src/user/UserRepository.cpp.i
 
 CMakeFiles/prog.dir/src/user/UserRepository.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/user/UserRepository.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/user/UserRepository.cpp -o CMakeFiles/prog.dir/src/user/UserRepository.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/user/UserRepository.cpp -o CMakeFiles/prog.dir/src/user/UserRepository.cpp.s
 
 CMakeFiles/prog.dir/src/utils/test_stack.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/utils/test_stack.cpp.o: /home/softadastra/cleaning_plateforme/src/utils/test_stack.cpp
+CMakeFiles/prog.dir/src/utils/test_stack.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/utils/test_stack.cpp
 CMakeFiles/prog.dir/src/utils/test_stack.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/prog.dir/src/utils/test_stack.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/utils/test_stack.cpp.o -MF CMakeFiles/prog.dir/src/utils/test_stack.cpp.o.d -o CMakeFiles/prog.dir/src/utils/test_stack.cpp.o -c /home/softadastra/cleaning_plateforme/src/utils/test_stack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/prog.dir/src/utils/test_stack.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/utils/test_stack.cpp.o -MF CMakeFiles/prog.dir/src/utils/test_stack.cpp.o.d -o CMakeFiles/prog.dir/src/utils/test_stack.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/utils/test_stack.cpp
 
 CMakeFiles/prog.dir/src/utils/test_stack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/utils/test_stack.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/utils/test_stack.cpp > CMakeFiles/prog.dir/src/utils/test_stack.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/utils/test_stack.cpp > CMakeFiles/prog.dir/src/utils/test_stack.cpp.i
 
 CMakeFiles/prog.dir/src/utils/test_stack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/utils/test_stack.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/utils/test_stack.cpp -o CMakeFiles/prog.dir/src/utils/test_stack.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/utils/test_stack.cpp -o CMakeFiles/prog.dir/src/utils/test_stack.cpp.s
 
 CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o: CMakeFiles/prog.dir/flags.make
-CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o: /home/softadastra/cleaning_plateforme/src/utils/test_unorderedMap.cpp
+CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o: /home/softadastra/Documents/usafi_kafundi/src/utils/test_unorderedMap.cpp
 CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o: CMakeFiles/prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o -MF CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o.d -o CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o -c /home/softadastra/cleaning_plateforme/src/utils/test_unorderedMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o -MF CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o.d -o CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.o -c /home/softadastra/Documents/usafi_kafundi/src/utils/test_unorderedMap.cpp
 
 CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/cleaning_plateforme/src/utils/test_unorderedMap.cpp > CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/softadastra/Documents/usafi_kafundi/src/utils/test_unorderedMap.cpp > CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.i
 
 CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/cleaning_plateforme/src/utils/test_unorderedMap.cpp -o CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/softadastra/Documents/usafi_kafundi/src/utils/test_unorderedMap.cpp -o CMakeFiles/prog.dir/src/utils/test_unorderedMap.cpp.s
 
 # Object files for target prog
 prog_OBJECTS = \
+"CMakeFiles/prog.dir/src/category/Category.cpp.o" \
+"CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o" \
+"CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o" \
 "CMakeFiles/prog.dir/src/config/Config.cpp.o" \
 "CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o" \
 "CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o" \
@@ -270,6 +315,9 @@ prog_OBJECTS = \
 # External object files for target prog
 prog_EXTERNAL_OBJECTS =
 
+prog: CMakeFiles/prog.dir/src/category/Category.cpp.o
+prog: CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o
+prog: CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o
 prog: CMakeFiles/prog.dir/src/config/Config.cpp.o
 prog: CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o
 prog: CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o
@@ -294,7 +342,7 @@ prog: /usr/local/lib/libgtest.a
 prog: /usr/local/lib/libgtest_main.a
 prog: /usr/local/lib/libboost_atomic.so.1.78.0
 prog: CMakeFiles/prog.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/softadastra/cleaning_plateforme/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable prog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/softadastra/Documents/usafi_kafundi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable prog"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/prog.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -306,6 +354,6 @@ CMakeFiles/prog.dir/clean:
 .PHONY : CMakeFiles/prog.dir/clean
 
 CMakeFiles/prog.dir/depend:
-	cd /home/softadastra/cleaning_plateforme/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/softadastra/cleaning_plateforme /home/softadastra/cleaning_plateforme /home/softadastra/cleaning_plateforme/build /home/softadastra/cleaning_plateforme/build /home/softadastra/cleaning_plateforme/build/CMakeFiles/prog.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/softadastra/Documents/usafi_kafundi/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/softadastra/Documents/usafi_kafundi /home/softadastra/Documents/usafi_kafundi /home/softadastra/Documents/usafi_kafundi/build /home/softadastra/Documents/usafi_kafundi/build /home/softadastra/Documents/usafi_kafundi/build/CMakeFiles/prog.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/prog.dir/depend
 

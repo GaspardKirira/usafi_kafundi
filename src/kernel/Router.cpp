@@ -92,15 +92,15 @@ namespace Softadastra
             res.result(http::status::method_not_allowed); // Code 405 pour méthode non autorisée
             res.set(http::field::content_type, "application/json");
             res.body() = json{{"message", "Method Not Allowed"}}.dump();
-            return false; // Retourner immédiatement après avoir géré l'erreur
+            return false;
         }
 
         // Si aucune route ne correspond, retourner "Route not found"
         spdlog::warn("Route not found for method '{}' and path '{}'", req.method_string(), req.target());
         res.result(http::status::not_found); // Code 404 pour route non trouvée
         res.set(http::field::content_type, "application/json");
-        res.body() = json{{"message", "Route not found"}}.dump(); // Message pour "Route not found"
-        return false;                                             // Retourner immédiatement après avoir géré l'erreur
+        res.body() = json{{"message", "Route not found"}}.dump();
+        return false;
     }
 
     bool Router::matches_dynamic_route(const std::string &route_pattern, const std::string &path,
@@ -132,6 +132,10 @@ namespace Softadastra
             }
 
             spdlog::info("Extracted parameters: {}", map_to_string(params));
+            for (auto route : route_patterns_)
+            {
+                spdlog::info("route: {}", route);
+            }
 
             // Assurez-vous que le gestionnaire est bien de type DynamicRequestHandler
             auto dynamic_handler = std::dynamic_pointer_cast<DynamicRequestHandler>(handler);

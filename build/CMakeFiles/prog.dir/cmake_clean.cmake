@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/prog.dir/src/category/Category.cpp.o"
+  "CMakeFiles/prog.dir/src/category/Category.cpp.o.d"
+  "CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o"
+  "CMakeFiles/prog.dir/src/category/CategoryRepository.cpp.o.d"
+  "CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o"
+  "CMakeFiles/prog.dir/src/category/CategoryValidator.cpp.o.d"
   "CMakeFiles/prog.dir/src/config/Config.cpp.o"
   "CMakeFiles/prog.dir/src/config/Config.cpp.o.d"
   "CMakeFiles/prog.dir/src/config/RouteConfigurator.cpp.o"

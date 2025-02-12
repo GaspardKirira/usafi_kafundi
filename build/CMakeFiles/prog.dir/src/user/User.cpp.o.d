@@ -1,7 +1,7 @@
 CMakeFiles/prog.dir/src/user/User.cpp.o: \
- /home/softadastra/cleaning_plateforme/src/user/User.cpp \
+ /home/softadastra/Documents/usafi_kafundi/src/user/User.cpp \
  /usr/include/stdc-predef.h \
- /home/softadastra/cleaning_plateforme/src/user/User.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/user/User.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -289,9 +289,9 @@ CMakeFiles/prog.dir/src/user/User.cpp.o: \
  /usr/include/nlohmann/ordered_map.hpp /usr/include/c++/13/any \
  /usr/include/nlohmann/detail/macro_unscope.hpp \
  /usr/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
- /home/softadastra/cleaning_plateforme/src/user/Password.hpp \
- /home/softadastra/cleaning_plateforme/src/user/PasswordValidator.hpp \
- /home/softadastra/cleaning_plateforme/libs/bcrypt/bcrypt.h \
+ /home/softadastra/Documents/usafi_kafundi/src/user/Password.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/user/PasswordValidator.hpp \
+ /home/softadastra/Documents/usafi_kafundi/libs/bcrypt/bcrypt.h \
  /usr/include/openssl/evp.h /usr/include/openssl/macros.h \
  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
  /usr/include/x86_64-linux-gnu/openssl/configuration.h \
@@ -315,7 +315,7 @@ CMakeFiles/prog.dir/src/user/User.cpp.o: \
  /usr/include/openssl/objects.h /usr/include/openssl/obj_mac.h \
  /usr/include/openssl/asn1.h /usr/include/openssl/asn1err.h \
  /usr/include/openssl/objectserr.h \
- /home/softadastra/cleaning_plateforme/src/user/Email.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/user/Email.hpp \
  /usr/include/c++/13/regex /usr/include/c++/13/bitset \
  /usr/include/c++/13/stack /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
@@ -331,4 +331,4 @@ CMakeFiles/prog.dir/src/user/User.cpp.o: \
  /usr/include/c++/13/bits/regex.h /usr/include/c++/13/bits/regex.tcc \
  /usr/include/c++/13/bits/regex_executor.h \
  /usr/include/c++/13/bits/regex_executor.tcc \
- /home/softadastra/cleaning_plateforme/src/user/EmailValidator.hpp
+ /home/softadastra/Documents/usafi_kafundi/src/user/EmailValidator.hpp

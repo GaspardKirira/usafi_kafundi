@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB
 
-CXX_INCLUDES = -I/home/softadastra/cleaning_plateforme/libs/bcrypt -I/usr/include/mysql -I/usr/local/include/spdlog -I/home/softadastra/cleaning_plateforme/src/config
+CXX_INCLUDES = -I/home/softadastra/Documents/usafi_kafundi/libs/bcrypt -I/usr/include/mysql -I/usr/local/include/spdlog -I/home/softadastra/Documents/usafi_kafundi/src/config
 
 CXX_FLAGS =  -Wall -Wextra -Weffc++ -g -fsanitize=address -std=gnu++17
 

@@ -52,8 +52,6 @@ namespace Softadastra
                                          }
                                          try
                                          {
-                                             std::cout << "Password claire : " << password << ", lenght: " << password.length() << std::endl;
-
                                              auto c_email = std::make_shared<Email>(email);
                                              auto c_password = std::make_shared<Password>(password);
 
@@ -69,8 +67,10 @@ namespace Softadastra
                                              json_data["firstname"] = user->getFirstName();
                                              json_data["lastname"] = user->getLastName();
                                              json_data["username"] = user->getUserName();
+                                             json_data["email"] = user->getEmail();
+                                             json_data["password"] = user->getPassword();
 
-                                             Response::success_response(res, user->to_json());
+                                             Response::json_response(res, json_data);
                                          }
                                          catch (const std::exception &e)
                                          {

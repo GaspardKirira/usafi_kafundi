@@ -1,7 +1,7 @@
 CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o: \
- /home/softadastra/cleaning_plateforme/src/kernel/SimpleRequestHandler.cpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/SimpleRequestHandler.cpp \
  /usr/include/stdc-predef.h \
- /home/softadastra/cleaning_plateforme/src/kernel/SimpleRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/SimpleRequestHandler.hpp \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -73,7 +73,7 @@ CMakeFiles/prog.dir/src/kernel/SimpleRequestHandler.cpp.o: \
  /usr/include/c++/13/bits/std_abs.h \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/softadastra/cleaning_plateforme/src/kernel/IRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/IRequestHandler.hpp \
  /usr/local/include/boost/beast/http.hpp \
  /usr/local/include/boost/beast/core/detail/config.hpp \
  /usr/local/include/boost/config.hpp \

@@ -21,6 +21,7 @@ namespace Softadastra
             {
                 throw std::runtime_error("Erreur lors de la génération du salt.");
             }
+
             char hashed_password[BCRYPT_HASHSIZE];
             if (bcrypt_hashpw(password.c_str(), salt, hashed_password) != 0)
             {

@@ -1,8 +1,8 @@
 CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o: \
- /home/softadastra/cleaning_plateforme/src/kernel/DynamicRequestHandler.cpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/DynamicRequestHandler.cpp \
  /usr/include/stdc-predef.h \
- /home/softadastra/cleaning_plateforme/src/kernel/DynamicRequestHandler.hpp \
- /home/softadastra/cleaning_plateforme/src/kernel/IRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/DynamicRequestHandler.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/IRequestHandler.hpp \
  /usr/local/include/boost/beast/http.hpp \
  /usr/local/include/boost/beast/core/detail/config.hpp \
  /usr/local/include/boost/config.hpp \
@@ -1125,7 +1125,7 @@ CMakeFiles/prog.dir/src/kernel/DynamicRequestHandler.cpp.o: \
  /usr/include/c++/13/bits/regex.h /usr/include/c++/13/bits/regex.tcc \
  /usr/include/c++/13/bits/regex_executor.h \
  /usr/include/c++/13/bits/regex_executor.tcc \
- /home/softadastra/cleaning_plateforme/src/kernel/Response.hpp \
+ /home/softadastra/Documents/usafi_kafundi/src/kernel/Response.hpp \
  /usr/include/c++/13/fstream \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
