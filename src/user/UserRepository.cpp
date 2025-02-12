@@ -2,12 +2,13 @@
 #include <memory>
 #include <vector>
 #include <stdexcept>
+#include "../config/Config.hpp"
 
 namespace Softadastra
 {
     UserRepository::UserRepository(Config &config) : m_config(config) {}
 
-    std::unique_ptr<sql::Connection> UserRepository::getDbConnection()
+    std::shared_ptr<sql::Connection> UserRepository::getDbConnection()
     {
         try
         {
@@ -24,7 +25,7 @@ namespace Softadastra
 
     void UserRepository::saveUser(const User &user)
     {
-        std::unique_ptr<sql::Connection> con = getDbConnection();
+        std::shared_ptr<sql::Connection> con = getDbConnection();
         std::unique_ptr<sql::PreparedStatement> pstmt(con->prepareStatement(
             "INSERT INTO users(firstname, lastname, username, email, password_hash, opt) "
             "VALUES(?,?,?,?,?,?)"));
@@ -41,13 +42,15 @@ namespace Softadastra
     std::vector<User> UserRepository::findAll()
     {
         std::vector<User> users;
-        std::unique_ptr<sql::Connection> con = getDbConnection();
+        std::shared_ptr<sql::Connection> con = getDbConnection();
         std::unique_ptr<sql::PreparedStatement> pstmt(con->prepareStatement("SELECT * FROM users"));
         std::unique_ptr<sql::ResultSet> res(pstmt->executeQuery());
 
         while (res->next())
         {
-            User user(res->getString("firstname"), res->getString("lastname"), res->getString("username"), res->getString("email"), res->getString("password_hash"));
+            auto email = std::make_shared<Email>(res->getString("email"));
+            auto password = std::make_shared<Password>(res->getString("password"));
+            User user(res->getString("firstname"), res->getString("lastname"), res->getString("username"), email, password);
             users.push_back(user);
         }
 
@@ -58,7 +61,7 @@ namespace Softadastra
     {
         try
         {
-            std::unique_ptr<sql::Connection> con = getDbConnection();
+            std::shared_ptr<sql::Connection> con = getDbConnection();
             std::unique_ptr<sql::PreparedStatement> pstmt(con->prepareStatement("SELECT * FROM users WHERE id = ?"));
             pstmt->setInt(1, userId);
 
@@ -94,7 +97,7 @@ namespace Softadastra
     {
         try
         {
-            std::unique_ptr<sql::Connection> con = getDbConnection();
+            std::shared_ptr<sql::Connection> con = getDbConnection();
             std::unique_ptr<sql::PreparedStatement> pstmt(con->prepareStatement(
                 "UPDATE users SET firstname = ?, lastname = ?, username = ?, email = ?, password_hash = ? WHERE id = ?"));
 
@@ -119,7 +122,7 @@ namespace Softadastra
         try
         {
             // Vérifier d'abord si l'utilisateur existe
-            std::unique_ptr<sql::Connection> con = getDbConnection();
+            std::shared_ptr<sql::Connection> con = getDbConnection();
             std::unique_ptr<sql::PreparedStatement> pstmt(con->prepareStatement("SELECT COUNT(*) FROM users WHERE id = ?"));
             pstmt->setInt(1, userId);
             std::unique_ptr<sql::ResultSet> res(pstmt->executeQuery());

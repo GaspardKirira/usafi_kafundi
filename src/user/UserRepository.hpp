@@ -15,7 +15,7 @@ namespace Softadastra
         std::vector<User> findAll();
         std::shared_ptr<User> find(int userId);
         void update(int userId, const User &user);
-        std::unique_ptr<sql::Connection> getDbConnection();
+        std::shared_ptr<sql::Connection> getDbConnection();
         void deleteUser(int userId);
         ~UserRepository();
 

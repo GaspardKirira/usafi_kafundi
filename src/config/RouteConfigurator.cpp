@@ -2,7 +2,7 @@
 #include "../Controllers/ProductController.hpp"
 #include "../Controllers/UserController.hpp"
 #include "../Controllers/HomeController.hpp"
-#include "../user/UserRepository.hpp"
+#include <memory>
 
 namespace Softadastra
 {
@@ -16,14 +16,14 @@ namespace Softadastra
         Config &config = Config::getInstance();
         config.loadConfig();
 
-        HomeController homeController;
-        homeController.configure(router_);
+        auto homeController = std::make_unique<HomeController>(config);
+        homeController->configure(router_);
 
-        ProductController productController;
-        productController.configure(router_);
+        auto productController = std::make_unique<ProductController>(config);
+        productController->configure(router_);
 
-        UserRepository userRepository(config);
-        UserController userController(userRepository);
-        userController.configure(router_);
+        auto userController = std::make_shared<UserController>(config);
+        userController->configure(router_);
     }
+
 }

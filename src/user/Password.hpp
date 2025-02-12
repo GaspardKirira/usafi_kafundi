@@ -12,11 +12,9 @@ namespace Softadastra
         // Constructeur par défaut
         Password() = default;
 
-        // Constructeur avec le mot de passe
         explicit Password(const std::string &password)
         {
-            // Vérification de la complexité du mot de passe
-            if (!Softadastra::PasswordValidator::validatePasswordComplexity(password))
+            if (Softadastra::PasswordValidator::validatePasswordComplexity(password))
             {
                 throw std::invalid_argument("Le mot de passe ne respecte pas les exigences de complexité. "
                                             "Le mot de passe doit :\n"
@@ -27,18 +25,20 @@ namespace Softadastra
                                             "- Contenir au moins un caractère spécial (exemple : !, @, #, $, %, etc.)");
             }
 
-            // Si la complexité est valide, hachage du mot de passe
             m_password_hash = Softadastra::PasswordValidator::hashPassword(password);
         }
 
-        // Getter pour le hash du mot de passe
+        ~Password()
+        {
+            std::cout << "Password destroyed" << std::endl;
+        }
+
         const std::string &getPasswordHash() const { return m_password_hash; }
         void setPasswordHash(const std::string &password_hash)
         {
             m_password_hash = password_hash;
         }
 
-        // Méthode pour valider un mot de passe donné
         void validatePassword(const std::string &password) const
         {
             try

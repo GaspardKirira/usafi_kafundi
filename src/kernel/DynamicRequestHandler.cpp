@@ -1,7 +1,8 @@
 #include "DynamicRequestHandler.hpp"
 #include <spdlog/spdlog.h>
-#include <regex>
 #include <nlohmann/json.hpp>
+#include <regex>
+#include "Response.hpp"
 
 using json = nlohmann::json;
 
@@ -14,60 +15,93 @@ namespace Softadastra
             handler)
         : params_(), handler_(std::move(handler))
     {
-        spdlog::info("DynamicRequestHandler initialized.");
     }
 
     void DynamicRequestHandler::handle_request(const http::request<http::string_body> &req,
                                                http::response<http::string_body> &res)
     {
-        spdlog::info("Handling request with body...");
-
-        // Extraire le corps de la requête
-        const std::string &body = req.body();
-
-        json request_json;
-        try
+        // Vérifier la méthode de la requête
+        if (req.method() == http::verb::get)
         {
-            // Parser le corps JSON
-            request_json = json::parse(body);
-        }
-        catch (const std::exception &e)
-        {
-            spdlog::error("Failed to parse JSON body: {}", e.what());
-            res.result(http::status::bad_request);
-            res.set(http::field::content_type, "application/json");
-            res.body() = json{{"message", "Invalid JSON body."}}.dump();
-            return;
-        }
+            // Log de la méthode et des paramètres extraits
+            spdlog::info("Handling GET request for path: {}", req.target());
 
-        // Appeler le handler avec les paramètres extraits
-        handler_({{"body", body}}, res);
+            // Vérifier si les paramètres dynamiques sont présents
+            auto id_it = params_.find("id");
+            if (id_it != params_.end())
+            {
+                spdlog::info("Parameter 'id' found: {}", id_it->second);
+            }
+
+            // Traiter la requête
+            handler_(params_, res);
+        }
+        else
+        {
+            // Traiter d'autres méthodes HTTP
+            const std::string &body = req.body();
+            if (body.empty())
+            {
+                Response::error_response(res, http::status::bad_request, "Empty request body.");
+                return;
+            }
+
+            json request_json;
+            try
+            {
+                request_json = json::parse(body);
+            }
+            catch (const std::exception &e)
+            {
+                Response::error_response(res, http::status::bad_request, "Invalid JSON body.");
+                return;
+            }
+
+            // Plutôt que d'ajouter directement "body" à params_, assurez-vous qu'il existe dans le handler
+            if (params_.find("body") != params_.end())
+            {
+                handler_({{"body", body}}, res);
+            }
+            else
+            {
+                Response::error_response(res, http::status::bad_request, "Missing 'body' parameter.");
+            }
+        }
     }
 
-    void DynamicRequestHandler::set_params(const std::unordered_map<std::string, std::string> &params)
+    void DynamicRequestHandler::set_params(
+        const std::unordered_map<std::string, std::string> &params,
+        http::response<http::string_body> &res)
     {
         spdlog::info("Setting parameters in DynamicRequestHandler...");
 
+        // Vérification des paramètres
         for (const auto &param : params)
         {
             const std::string &key = param.first;
             const std::string &value = param.second;
 
-            // Validation générique (par exemple pour ID ou slug)
-            if (key == "id" && !std::regex_match(value, std::regex("^[0-9]+$")))
+            if (key == "id")
             {
-                spdlog::warn("Invalid 'id' parameter: {}", value);
-                throw std::invalid_argument("Invalid parameter value for 'id'. Must be a positive integer.");
+                // Valider que 'id' est un entier positif
+                if (!std::regex_match(value, std::regex("^[0-9]+$")))
+                {
+                    Response::error_response(res, http::status::bad_request, "Invalid 'id' parameter. Must be a positive integer.");
+                    return;
+                }
             }
-            else if (key == "slug" && !std::regex_match(value, std::regex("^[a-zA-Z0-9_-]+$")))
+            else if (key == "slug")
             {
-                spdlog::warn("Invalid 'slug' parameter: {}", value);
-                throw std::invalid_argument("Invalid parameter value for 'slug'. Must be alphanumeric.");
+                if (!std::regex_match(value, std::regex("^[a-zA-Z0-9_-]+$")))
+                {
+                    Response::error_response(res, http::status::bad_request, "Invalid 'slug' parameter. Must be alphanumeric.");
+                    return;
+                }
             }
         }
 
-        params_ = params; // Mise à jour des paramètres
-        spdlog::info("Parameters set successfully.");
+        // Si la validation passe, on assigne les paramètres
+        params_ = params;
     }
 
 }

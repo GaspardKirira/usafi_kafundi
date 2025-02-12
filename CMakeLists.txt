@@ -1,65 +1,73 @@
-# Minimum required version of CMake
+# Spécifie la version minimale de CMake requise
 cmake_minimum_required(VERSION 3.10)
 
-# Project name
-project(MyProject CXX)
+# Nom du projet
+project(MonProjet CXX)
 
-# Specify C++ standard
-set(CMAKE_CXX_STANDARD 20)
-
-# Enable warnings and debugging
+# Définir les options de compilation
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Weffc++ -g -fsanitize=address")
 
-# Set linker flags
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=address")
+# Trouver Boost, y compris les composants nécessaires
+find_package(Boost 1.78 REQUIRED COMPONENTS filesystem system)
 
-# Ajouter le répertoire contenant bcrypt.h
-# Nous utilisons ici le répertoire 'libs/bcrypt' comme exemple
-include_directories(${CMAKE_SOURCE_DIR}/libs/bcrypt)
-
-# Ajouter le répertoire contenant la bibliothèque statique libbcrypt.a
-link_directories(${CMAKE_SOURCE_DIR}/libs/bcrypt)
-
-# Find Boost (ensure it is installed)
-find_package(Boost 1.78 REQUIRED)
-
-# Check if Boost is found
+# Si Boost a été trouvé, lier Boost à ton projet
 if (Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
 else()
     message(FATAL_ERROR "Boost not found!")
 endif()
 
-# Include directories for MySQL Connector/C++
+# Nous utilisons ici le répertoire 'libs/bcrypt' comme exemple
+include_directories(${CMAKE_SOURCE_DIR}/libs/bcrypt)
+
+# Ajouter le répertoire contenant la bibliothèque statique libbcrypt.a
+link_directories(${CMAKE_SOURCE_DIR}/libs/bcrypt)
+
+# Ajouter les répertoires d'inclusion de MySQL Connector/C++
 include_directories(/usr/include/mysql)
+
+# Ajouter les répertoires de bibliothèque MySQL Connector/C++
 link_directories(/usr/lib)
 
-# Include directories for spdlog
+# Ajouter le répertoire d'inclusion de spdlog
 include_directories(/usr/local/include/spdlog)
+
+# Ajouter le répertoire où la bibliothèque spdlog a été installée
 link_directories(/usr/local/lib)
 
-# Find OpenSSL (ensure it is installed)
+# Trouver OpenSSL sur ton système
 find_package(OpenSSL REQUIRED)
 
-# Include OpenSSL headers
+# Ajouter le répertoire d'inclusion de OpenSSL
 include_directories(${OPENSSL_INCLUDE_DIR})
 
-# Include directories for custom source files (such as src/config)
+# Ajouter le répertoire src/config où se trouvent Config.hpp et Config.cpp
 include_directories(${CMAKE_SOURCE_DIR}/src/config)
 
-# Find all .cpp files in src and src/config
-file(GLOB_RECURSE SOURCE_FILES src/*.cpp src/config/*.cpp)
+# Ajouter tous les fichiers .cpp dans src et src/config
+# Assure-toi que Config.cpp est bien inclus
+file(GLOB_RECURSE SOURCE_FILES src/*.cpp src/config/*.cpp src/config/RouteConfigurator.cpp)
 
-# Add the executable target
-add_executable(main src/start.cpp ${SOURCE_FILES})
+# Ajouter l'exécutable et spécifier les fichiers sources
+add_executable(prog ${SOURCE_FILES})
 
-# Link libraries
-target_link_libraries(main 
+# Lier la bibliothèque MySQL Connector/C++ au projet
+target_link_libraries(prog PRIVATE mysqlcppconn)
+
+# Lier Boost à ton projet en utilisant les fichiers spécifiques au lieu des alias
+target_link_libraries(prog PRIVATE ${Boost_FILESYSTEM_LIBRARY} ${Boost_SYSTEM_LIBRARY})
+
+# Lier spdlog à ton projet
+target_link_libraries(prog PRIVATE spdlog)
+
+# Lier OpenSSL à ton projet
+target_link_libraries(prog 
     PRIVATE
     /usr/local/lib/libgtest.a
     /usr/local/lib/libgtest_main.a
     pthread
-    bcrypt  # Nous l'avons inclus ici comme une bibliothèque statique
+    bcrypt 
     ssl
     crypto
     mysqlcppconn

@@ -4,7 +4,6 @@
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
 #include <boost/asio/ip/tcp.hpp>
-#include <boost/asio/ssl.hpp>
 #include <nlohmann/json.hpp>
 
 #include <boost/regex.hpp>
@@ -25,6 +24,7 @@
 #include "Session.hpp"
 #include "Response.hpp"
 #include "../config/RouteConfigurator.hpp"
+#include "ThreadPool.hpp"
 
 namespace Softadastra
 {
@@ -34,47 +34,75 @@ namespace Softadastra
     namespace net = boost::asio;
 
     using tcp = net::ip::tcp;
-    using ssl_socket = boost::asio::ssl::stream<tcp::socket>;
     using json = nlohmann::json;
 
-   constexpr size_t NUMBER_OF_THREADS = 6;
+    constexpr size_t NUMBER_OF_THREADS = 8;
 
     /**
-     * @brief Classe représentant un serveur HTTP.
+     * @class HTTPServer
+     * @brief Represents an HTTP server that listens for incoming client connections.
      *
-     * Cette classe gère le serveur HTTP, y compris l'acceptation des connexions, la gestion des routes,
-     * et l'envoi de réponses HTTP.
+     * The HTTPServer class is responsible for initializing the server, accepting client
+     * connections, and delegating requests to appropriate handlers. It uses a thread pool
+     * for handling incoming requests asynchronously.
      */
     class HTTPServer
     {
     public:
         /**
-         * @brief Constructeur pour initialiser le serveur HTTP avec la configuration fournie.
+         * @brief Constructor to initialize the HTTP server with a configuration object.
          *
-         * @param config La configuration du serveur, incluant le port d'écoute.
+         * @param config The configuration object that contains server settings (e.g., port, routes).
          */
         explicit HTTPServer(Config &config);
 
+        void handle_signals();
+
+        void stop();
+
         /**
-         * @brief Démarre le serveur HTTP et commence à accepter les connexions.
+         * @brief Starts the server and begins accepting incoming connections.
+         *
+         * This method initializes the I/O context, starts the acceptor, and begins listening
+         * for incoming client connections. Once a connection is accepted, it is handled by
+         * the `handle_client` method.
          */
         void run();
 
+        /**
+         * @brief Starts the acceptor to listen for incoming client connections.
+         *
+         * This method begins the asynchronous accept operation, where new client connections
+         * will be accepted and passed to the `handle_client` method.
+         */
+        void start_accept();
+
     private:
         /**
-         * @brief Gère la session pour un client connecté.
+         * @brief Handles a client connection and processes the request.
          *
-         * @param socket Le socket de la connexion client.
-         * @param router Le routeur utilisé pour acheminer les requêtes HTTP.
+         * This method is responsible for managing the client connection, which includes creating
+         * a session for the client, routing the request, and sending back the response.
+         *
+         * @param socket_ptr A shared pointer to the socket used for communication with the client.
+         * @param router A reference to the Router used to handle the HTTP request.
          */
         void handle_client(std::shared_ptr<tcp::socket> socket_ptr, Router &router);
 
-        Config &config_;                                        ///< Référence à la configuration du serveur.
-        std::unique_ptr<net::io_context> io_context_;           ///< Contexte d'entrée/sortie pour le serveur.
-        std::unique_ptr<tcp::acceptor> acceptor_;               ///< Accepteur pour accepter les connexions entrantes.
-        Router router_;                                         ///< Router pour acheminer les requêtes HTTP.
-        std::unique_ptr<RouteConfigurator> route_configurator_; ///< Responsable de la configuration des routes.
+        void close_socket(std::shared_ptr<tcp::socket> socket);
+
+        Config &config_;                                        ///< Configuration object for the server settings.
+        std::shared_ptr<net::io_context> io_context_;           ///< I/O context for asynchronous operations.
+        std::unique_ptr<tcp::acceptor> acceptor_;               ///< Acceptor for accepting incoming TCP connections.
+        Router router_;                                         ///< Router used to route HTTP requests.
+        std::unique_ptr<RouteConfigurator> route_configurator_; ///< Configurator for setting up routes.
+
+        Softadastra::ThreadPool request_thread_pool_; ///< Thread pool for handling incoming requests.
+        std::vector<std::thread> io_threads_;         ///< Threads for running the I/O context.
+
+        std::atomic<bool> stop_requested_;
     };
+
 };
 
 #endif // HTTPSERVER_HPP

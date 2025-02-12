@@ -3,13 +3,16 @@
 namespace Softadastra
 {
     User::User()
-        : m_created_at(std::time(nullptr)), m_update_at(std::time(nullptr)) {}
+        : m_email(),
+          m_password(),
+          m_created_at(std::time(nullptr)),
+          m_update_at(std::time(nullptr)) {}
 
     User::User(const std::string &firstname,
                const std::string &lastname,
                const std::string &username,
-               const std::string &email,
-               const std::string &password)
+               const std::shared_ptr<Email> &email,
+               const std::shared_ptr<Password> &password)
         : m_firstname(firstname), m_lastname(lastname), m_username(username),
           m_email(email), m_password(password), m_created_at(std::time(nullptr)), m_update_at(std::time(nullptr)) {}
 
@@ -79,7 +82,8 @@ namespace Softadastra
         std::cout << "ID: " << m_id << "\n"
                   << "Name: " << m_firstname << " " << m_lastname << "\n"
                   << "Username: " << m_username << "\n"
-                  << "Email: " << m_email << "\n"
+                  << "Email: " << m_email->getEmail() << "\n"
+                  << "Password: " << m_password->getPasswordHash() << "\n"
                   << "Active: " << (m_is_active ? "Yes" : "No") << "\n"
                   << "OTP: " << m_otp << std::endl;
     }
@@ -90,8 +94,8 @@ namespace Softadastra
             {"firstname", m_firstname},
             {"lastname", m_lastname},
             {"username", m_username},
-            {"email", m_email},
-            {"password_hash", m_password},
+            {"email", m_email->getEmail()},
+            {"password_hash", m_password->getPasswordHash()},
             {"create_at", std::ctime(&m_created_at)}};
     }
 

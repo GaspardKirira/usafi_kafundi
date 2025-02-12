@@ -7,6 +7,8 @@
 #include <chrono>
 #include <ctime>
 #include <nlohmann/json.hpp>
+#include "Password.hpp"
+#include "Email.hpp"
 
 using json = nlohmann::json;
 
@@ -20,8 +22,8 @@ namespace Softadastra
         User(const std::string &firstname,
              const std::string &lastname,
              const std::string &username,
-             const std::string &email,
-             const std::string &password);
+             const std::shared_ptr<Email> &email,
+             const std::shared_ptr<Password> &password);
 
         ~User() = default;
         User(const User &other);
@@ -33,8 +35,8 @@ namespace Softadastra
         const std::string &getFirstName() const { return m_firstname; }
         const std::string &getLastName() const { return m_lastname; }
         const std::string &getUserName() const { return m_username; }
-        const std::string &getEmail() const { return m_email; }
-        const std::string &getPassword() const { return m_password; }
+        const std::string &getEmail() const { return m_email->getEmail(); }
+        const std::string &getPassword() const { return m_password->getPasswordHash(); }
         std::time_t getCreatedAt() const { return m_created_at; }
 
         void warning(const std::string &message) const;
@@ -44,8 +46,8 @@ namespace Softadastra
         void setFirstName(const std::string &firstname) { m_firstname = firstname; }
         void setLastName(const std::string &lastname) { m_lastname = lastname; }
         void setUserName(const std::string &username) { m_username = username; }
-        void setEmail(const std::string &email) { m_email = email; }
-        void setPassword(const std::string &password) { m_password = password; }
+        void setEmail(const std::string &email) { m_email->setEmail(email); }
+        void setPassword(const std::string &password) { m_password->setPasswordHash(password); }
         void setIsActive(bool value) { m_is_active = value; }
         void setOpt(int otp) { m_otp = otp; }
 
@@ -57,8 +59,10 @@ namespace Softadastra
         std::string m_firstname{};
         std::string m_lastname{};
         std::string m_username{};
-        std::string m_email{};
-        std::string m_password{};
+
+        std::shared_ptr<Email> m_email;
+        std::shared_ptr<Password> m_password;
+
         std::string reset_password_token{};
         std::string registration_token{};
         bool m_is_active{};

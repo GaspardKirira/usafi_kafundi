@@ -5,6 +5,7 @@
 #include "../kernel/SimpleRequestHandler.hpp"
 #include "../kernel/DynamicRequestHandler.hpp"
 #include "../kernel/IRequestHandler.hpp"
+#include "../config/Config.hpp"
 #include <unordered_map>
 #include <string>
 #include <memory>

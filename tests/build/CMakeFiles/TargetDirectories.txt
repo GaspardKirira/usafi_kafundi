@@ -1,3 +1,0 @@
-/home/softadastra/Documents/cpp/softadastra/src/user/tests/build/CMakeFiles/prog.dir
-/home/softadastra/Documents/cpp/softadastra/src/user/tests/build/CMakeFiles/edit_cache.dir
-/home/softadastra/Documents/cpp/softadastra/src/user/tests/build/CMakeFiles/rebuild_cache.dir

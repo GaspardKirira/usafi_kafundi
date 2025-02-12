@@ -1,0 +1,3 @@
+/home/softadastra/cleaning_plateforme/build/CMakeFiles/prog.dir
+/home/softadastra/cleaning_plateforme/build/CMakeFiles/edit_cache.dir
+/home/softadastra/cleaning_plateforme/build/CMakeFiles/rebuild_cache.dir

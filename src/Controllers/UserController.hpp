@@ -1,236 +1,86 @@
-#ifndef USERROUTES_HPP
-#define USERROUTES_HPP
+#ifndef USERCONTROLLER_HPP
+#define USERCONTROLLER_HPP
 
-#include <unordered_map>
-#include <string>
-#include <memory>
-#include <stdexcept>
 #include "Controller.hpp"
-#include "../user/UserRepository.hpp"
+#include "Validator.hpp"
 #include "../user/User.hpp"
+#include "../user/UserRepository.hpp"
+#include "../kernel/Response.hpp"
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 namespace Softadastra
 {
-
-    // Fonction pour convertir unordered_map en une chaîne lisible
-    std::string unordered_map_to_string(const std::unordered_map<std::string, std::string> &map)
-    {
-        std::stringstream ss;
-        ss << "{";
-        for (auto it = map.begin(); it != map.end(); ++it)
-        {
-            if (it != map.begin())
-            {
-                ss << ", "; // Ajouter une virgule pour séparer les éléments
-            }
-            ss << it->first << ": " << it->second;
-        }
-        ss << "}";
-        return ss.str();
-    }
     class UserController : public Controller
     {
     public:
-        UserController(const UserRepository &user_repository)
-            : m_user_repository(user_repository) {}
+        using Controller::Controller;
 
         void configure(Router &router) override
         {
-            router.add_route(http::verb::get, "/find/{id}",
+            router.add_route(http::verb::post, "/create_user",
                              std::static_pointer_cast<IRequestHandler>(
-                                 std::make_shared<DynamicRequestHandler>(
-                                     [this](const std::unordered_map<std::string, std::string> &params,
-                                            http::response<http::string_body> &res)
-                                     {
-                                         try
-                                         {
-                                             std::string user_id = params.at("id");
-                                             std::cerr << "ID param: " << user_id << std::endl; // Log l'ID reçu pour débogage
-                                             int id = std::stoi(user_id);                       // Conversion en int
-
-                                             std::shared_ptr<User> user = m_user_repository.find(id);
-
-                                             // Si l'utilisateur est trouvé, renvoyer les informations
-                                             res.result(http::status::ok);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{
-                                                 {"id", user->getId()},
-                                                 {"full_name", user->getFirstName() + " " + user->getLastName()},
-                                                 {"email", user->getEmail()},
-                                                 {"username", user->getUserName()}}
-                                                              .dump();
-                                         }
-                                         catch (const std::exception &e)
-                                         {
-                                             std::cerr << "Error: " << e.what() << std::endl; // Log de l'erreur pour débogage
-                                             res.result(http::status::not_found);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "User not found"}}.dump();
-                                         }
-                                     })));
-
-            // Route GET pour récupérer tous les utilisateurs
-            router.add_route(http::verb::get, "/users",
-                             std::static_pointer_cast<IRequestHandler>(
-                                 std::make_shared<DynamicRequestHandler>(
-                                     [this](const std::unordered_map<std::string, std::string> &,
-                                            http::response<http::string_body> &res)
-                                     {
-                                         try
-                                         {
-                                             std::vector<User> users = m_user_repository.findAll();
-
-                                             res.result(http::status::ok);
-                                             res.set(http::field::content_type, "application/json");
-                                             nlohmann::json json_users = nlohmann::json::array();
-                                             for (const auto &user : users)
-                                             {
-                                                 json_users.push_back({{"id", user.getId()}, {"full_name", user.getFirstName()}});
-                                             }
-                                             res.body() = json_users.dump();
-                                         }
-                                         catch (const std::exception &e)
-                                         {
-                                             res.result(http::status::internal_server_error);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "Error fetching users"}}.dump();
-                                         }
-                                     })));
-
-            router.add_route(http::verb::post, "/create",
-                             std::static_pointer_cast<IRequestHandler>(
-                                 std::make_shared<DynamicRequestHandler>(
-                                     [this](const std::unordered_map<std::string, std::string> &params,
-                                            http::response<http::string_body> &res)
+                                 std::make_shared<RequestHandler>(
+                                     [this](
+                                         const http::request<http::string_body> &req,
+                                         http::response<http::string_body> &res)
                                      {
                                          json request_json;
                                          try
                                          {
-                                             // Extraire et parser le JSON depuis les paramètres
-                                             request_json = json::parse(params.at("body"));
+                                             request_json = json::parse(req.body());
                                          }
                                          catch (const std::exception &e)
                                          {
-                                             res.result(http::status::bad_request);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "Invalid JSON body."}}.dump();
+                                             Response::error_response(res, http::status::bad_request, "Invalid JSON data");
                                              return;
                                          }
 
-                                         // Vérification des champs dans le JSON
-                                         if (request_json.find("firstname") == request_json.end())
-                                         {
-                                             res.result(http::status::bad_request);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "Le champ 'firstname' est manquant."}}.dump();
-                                             return;
-                                         }
-                                         if (request_json.find("lastname") == request_json.end())
-                                         {
-                                             res.result(http::status::bad_request);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "Le champ 'lastname' est manquant."}}.dump();
-                                             return;
-                                         }
-                                         if (request_json.find("username") == request_json.end())
-                                         {
-                                             res.result(http::status::bad_request);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "Le champ 'username' est manquant."}}.dump();
-                                             return;
-                                         }
-                                         if (request_json.find("email") == request_json.end())
-                                         {
-                                             res.result(http::status::bad_request);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "Le champ 'email' est manquant."}}.dump();
-                                             return;
-                                         }
-                                         if (request_json.find("password") == request_json.end())
-                                         {
-                                             res.result(http::status::bad_request);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "Le champ 'password' est manquant."}}.dump();
-                                             return;
-                                         }
+                                         std::string firstname, lastname, username, email, password;
+                                         bool is_valid = true;
 
-                                         // Créer un nouvel utilisateur
-                                         User new_user(request_json["firstname"], request_json["lastname"],
-                                                       request_json["username"], request_json["email"], request_json["password"]);
+                                         is_valid &= Validator::validate_field(request_json, "firstname", firstname, res, "Missing or invalid 'firstname'");
+                                         is_valid &= Validator::validate_field(request_json, "lastname", lastname, res, "Missing or invalid 'lastname'");
+                                         is_valid &= Validator::validate_field(request_json, "username", username, res, "Missing or invalid 'username'");
+                                         is_valid &= Validator::validate_field(request_json, "email", email, res, "Missing or invalid 'email'");
+                                         is_valid &= Validator::validate_field(request_json, "password", password, res, "Missing or invalid 'password'");
 
-                                         // Sauvegarder l'utilisateur dans la base de données
-                                         m_user_repository.saveUser(new_user);
-
-                                         // Répondre avec succès
-                                         res.result(http::status::created);
-                                         res.set(http::field::content_type, "application/json");
-                                         res.body() = json{{"message", "User created successfully"}}.dump();
-                                     })));
-
-            router.add_route(http::verb::put, "/user/{id}",
-                             std::static_pointer_cast<IRequestHandler>(
-                                 std::make_shared<DynamicRequestHandler>(
-                                     [this](const std::unordered_map<std::string, std::string> &params,
-                                            http::response<http::string_body> &res)
-                                     {
+                                         if (!is_valid)
+                                         {
+                                             return;
+                                         }
                                          try
                                          {
-                                             std::string user_id = params.at("id");
-                                             int id = std::stoi(user_id);
+                                             std::cout << "Password claire : " << password << ", lenght: " << password.length() << std::endl;
 
-                                             // Ici, vous récupérez les données de la requête et les utilisez pour mettre à jour l'utilisateur
-                                             // Exemple simplifié d'une mise à jour de "full_name"
-                                             std::string updated_full_name = "Updated User Name";
+                                             auto c_email = std::make_shared<Email>(email);
+                                             auto c_password = std::make_shared<Password>(password);
 
-                                             std::shared_ptr<User> updated_user = m_user_repository.find(id);
-                                             updated_user->setFirstName(updated_full_name);
+                                             std::unique_ptr<User> user = std::make_unique<User>(firstname, lastname, username, c_email, c_password);
 
-                                             // Mettre à jour l'utilisateur dans la base de données
-                                             m_user_repository.update(id, *updated_user);
+                                             Config &config = Config::getInstance();
+                                             config.loadConfig();
 
-                                             res.result(http::status::ok);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "User updated successfully"}}.dump();
+                                             std::unique_ptr<UserRepository> repo = std::make_unique<UserRepository>(config);
+                                             repo->saveUser(*user);
+
+                                             json json_data;
+                                             json_data["firstname"] = user->getFirstName();
+                                             json_data["lastname"] = user->getLastName();
+                                             json_data["username"] = user->getUserName();
+
+                                             Response::success_response(res, user->to_json());
                                          }
                                          catch (const std::exception &e)
                                          {
-                                             res.result(http::status::not_found);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "User not found"}}.dump();
+                                             Response::error_response(res, http::status::bad_request, e.what());
                                          }
-                                     })));
 
-            // Route DELETE pour supprimer un utilisateur
-            router.add_route(http::verb::get, "/delete/{id}",
-                             std::static_pointer_cast<IRequestHandler>(
-                                 std::make_shared<DynamicRequestHandler>(
-                                     [this](const std::unordered_map<std::string, std::string> &params,
-                                            http::response<http::string_body> &res)
-                                     {
-                                         try
-                                         {
-                                             std::string user_id = params.at("id");
-                                             int id = std::stoi(user_id);
-
-                                             // Supprimer l'utilisateur de la base de données
-                                             m_user_repository.deleteUser(id);
-
-                                             res.result(http::status::ok);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "User deleted successfully"}}.dump();
-                                         }
-                                         catch (const std::exception &e)
-                                         {
-                                             res.result(http::status::not_found);
-                                             res.set(http::field::content_type, "application/json");
-                                             res.body() = json{{"message", "User not found"}}.dump();
-                                         }
+                                         return;
                                      })));
         }
-
-    private:
-        UserRepository m_user_repository; // Assurez-vous d'instancier votre repository ici
     };
 }
 
-#endif // USERROUTES_HPP
+#endif // USERCONTROLLER_HPP
